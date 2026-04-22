@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
             <div className="flex flex-wrap justify-center sm:justify-start gap-3">
               {/* LinkedIn */}
               <a
-                href="https://www.linkedin.com/in/dharamveerkz/"
+                href="https://www.linkedin.com/in/dharamveerkr/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-lg hover:bg-blue-600 transition-transform transform hover:scale-110"
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
 
               {/* Instagram */}
               <a
-                href="https://www.instagram.com/dharamveerkz/"
+                href="https://www.instagram.com/imdharamvrr/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-lg hover:bg-pink-600 transition-transform transform hover:scale-110"
@@ -112,7 +112,7 @@ const Footer: React.FC = () => {
 
               {/* X (Twitter) */}
               <a
-                href="https://x.com/dharamveerkz"
+                href="https://x.com/imdharamvrr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-lg hover:bg-black transition-transform transform hover:scale-110"
@@ -122,7 +122,7 @@ const Footer: React.FC = () => {
 
               {/* Facebook */}
               <a
-                href="https://www.facebook.com/dharamveerkz"
+                href="https://www.facebook.com/imdharamvrr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-110"
