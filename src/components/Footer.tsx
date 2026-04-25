@@ -81,11 +81,11 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="relative bg-gray-950 text-gray-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-2 space-y-4">
-            <h3 className="text-2xl font-semibold text-white">
+            <h3 className="text-xl font-semibold text-white">
               Dharamveer Kumar
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed max-w-md">
@@ -94,17 +94,17 @@ const Footer: React.FC = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links - Vertical on mobile, horizontal on desktop */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider">
+            <h4 className="text-xs font-semibold text-white uppercase tracking-wider">
               Quick Links
             </h4>
-            <nav className="space-y-2">
+            <nav className="flex flex-col sm:flex-row lg:flex-col gap-2 sm:gap-4 lg:gap-2">
               {quickLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block text-sm text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-sm text-gray-400 hover:text-white transition-colors duration-200 py-1 sm:py-0"
                 >
                   {link.name}
                 </a>
@@ -114,10 +114,10 @@ const Footer: React.FC = () => {
 
           {/* Social Links */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider">
+            <h4 className="text-xs font-semibold text-white uppercase tracking-wider">
               Connect
             </h4>
-            <div className="flex flex-wrap gap-2.5">
+            <div className="flex flex-wrap gap-2">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
                 return (
@@ -127,11 +127,11 @@ const Footer: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.aria}
-                    className={`group relative p-2.5 bg-gray-900 rounded-lg border border-gray-800 ${social.color} hover:border-transparent transform hover:scale-105 transition-all duration-200`}
+                    className={`group relative p-2 bg-gray-900 rounded-lg border border-gray-800 ${social.color} hover:border-transparent transform hover:scale-105 transition-all duration-200`}
                   >
-                    <Icon className="w-4.5 h-4.5 text-gray-300 group-hover:text-white transition-colors" />
+                    <Icon className="w-4 h-4 text-gray-300 group-hover:text-white transition-colors" />
                     {/* Tooltip */}
-                    <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-gray-900 text-white text-xs font-medium rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap border border-gray-800 pointer-events-none">
+                    <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-900 text-white text-xs font-medium rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap border border-gray-800 pointer-events-none">
                       {social.name}
                       <ExternalLink className="inline w-3 h-3 ml-1 mb-0.5" />
                     </span>
@@ -143,15 +143,15 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
-          <p className="text-xs text-gray-500">
+        <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+          <p className="text-xs text-gray-500 text-center sm:text-left">
             <span className="text-gray-400">Dharamveer Kumar</span> © {new Date().getFullYear()} All rights reserved.
           </p>
 
           <button
             onClick={scrollToTop}
             aria-label="Scroll to top"
-            className="p-2.5 bg-gray-800 text-gray-300 rounded-lg hover:bg-gray-700 hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-600"
+            className="p-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-gray-700 hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-600"
           >
             <ArrowUp className="w-4 h-4" />
           </button>
