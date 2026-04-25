@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
-import { ArrowRight, ArrowDown, Sparkles, Play, ChevronRight } from "lucide-react";
+import { ArrowRight, ArrowDown, Sparkles, ChevronRight } from "lucide-react";
 
 const Home: React.FC = () => {
   const [typedText, setTypedText] = useState("");
@@ -34,8 +34,8 @@ const Home: React.FC = () => {
       if (!heroRef.current) return;
       const rect = heroRef.current.getBoundingClientRect();
       setMousePosition({
-        x: (e.clientX - rect.left - rect.width / 2) / 20,
-        y: (e.clientY - rect.top - rect.height / 2) / 20,
+        x: (e.clientX - rect.left - rect.width / 2) / 25,
+        y: (e.clientY - rect.top - rect.height / 2) / 25,
       });
     };
     window.addEventListener("mousemove", handleMouseMove);
@@ -57,7 +57,7 @@ const Home: React.FC = () => {
       className="relative min-h-screen flex items-center justify-center bg-gray-950 text-white overflow-hidden"
     >
       {/* Animated Background Grid */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div
           className="absolute inset-0"
           style={{
@@ -72,20 +72,20 @@ const Home: React.FC = () => {
 
       {/* Dynamic Gradient Orbs with Parallax */}
       <div
-        className="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-to-br from-yellow-400/20 to-amber-500/10 rounded-full blur-3xl transition-transform duration-100 ease-out"
+        className="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-to-br from-yellow-400/20 to-amber-500/10 rounded-full blur-3xl transition-transform duration-100 ease-out pointer-events-none"
         style={{ transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)` }}
       />
       <div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-amber-500/15 to-yellow-300/5 rounded-full blur-3xl transition-transform duration-100 ease-out"
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-amber-500/15 to-yellow-300/5 rounded-full blur-3xl transition-transform duration-100 ease-out pointer-events-none"
         style={{ transform: `translate(${-mousePosition.x}px, ${-mousePosition.y}px)` }}
       />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-yellow-400/5 via-transparent to-transparent rounded-full blur-3xl animate-pulse" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-yellow-400/5 via-transparent to-transparent rounded-full blur-3xl animate-pulse pointer-events-none" />
 
       {/* Floating Particles */}
       {[...Array(6)].map((_, i) => (
         <div
           key={i}
-          className="absolute w-1.5 h-1.5 bg-yellow-400/40 rounded-full animate-float"
+          className="absolute w-1.5 h-1.5 bg-yellow-400/40 rounded-full animate-float pointer-events-none"
           style={{
             top: `${Math.random() * 100}%`,
             left: `${Math.random() * 100}%`,
@@ -185,10 +185,10 @@ const Home: React.FC = () => {
       </a>
 
       {/* Decorative Corner Accents */}
-      <div className="absolute top-8 left-8 w-16 h-16 border-l-2 border-t-2 border-yellow-400/30 rounded-tl-xl" />
-      <div className="absolute top-8 right-8 w-16 h-16 border-r-2 border-t-2 border-yellow-400/30 rounded-tr-xl" />
-      <div className="absolute bottom-8 left-8 w-16 h-16 border-l-2 border-b-2 border-yellow-400/30 rounded-bl-xl" />
-      <div className="absolute bottom-8 right-8 w-16 h-16 border-r-2 border-b-2 border-yellow-400/30 rounded-br-xl" />
+      <div className="absolute top-8 left-8 w-16 h-16 border-l-2 border-t-2 border-yellow-400/30 rounded-tl-xl pointer-events-none" />
+      <div className="absolute top-8 right-8 w-16 h-16 border-r-2 border-t-2 border-yellow-400/30 rounded-tr-xl pointer-events-none" />
+      <div className="absolute bottom-8 left-8 w-16 h-16 border-l-2 border-b-2 border-yellow-400/30 rounded-bl-xl pointer-events-none" />
+      <div className="absolute bottom-8 right-8 w-16 h-16 border-r-2 border-b-2 border-yellow-400/30 rounded-br-xl pointer-events-none" />
     </section>
   );
 };
