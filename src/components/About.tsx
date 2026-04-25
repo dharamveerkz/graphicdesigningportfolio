@@ -9,14 +9,7 @@ import {
   Code,
   TrendingUp,
   Calendar,
-  Award,
-  Globe,
-  Instagram,
-  Linkedin,
-  Twitter,
-  Youtube,
   CheckCircle2,
-  ArrowRight,
 } from "lucide-react";
 import profileImage from "../assest/dp.png";
 
@@ -56,7 +49,7 @@ const About: React.FC = () => {
   ];
 
   const socialStats = [
-    { platform: "Pages Managed", value: "5+", icon: Globe },
+    { platform: "Pages Managed", value: "5+", icon: TrendingUp },
     { platform: "Posts Created", value: "100+", icon: Palette },
     { platform: "Engagement Growth", value: "40%+", icon: TrendingUp },
     { platform: "Years Experience", value: "3+", icon: Calendar },
@@ -119,18 +112,14 @@ const About: React.FC = () => {
           {/* Left Column - Profile & Bio */}
           <div className="lg:col-span-5 space-y-8">
             {/* Profile Card */}
-            <div className="relative group">
+            <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 border border-gray-200 shadow-lg">
                 <img
                   src={profileImage}
                   alt="Dharamveer Kumar"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover"
                   loading="lazy"
                 />
-              </div>
-              {/* Decorative accent */}
-              <div className="absolute -bottom-3 -right-3 w-12 h-12 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-xl flex items-center justify-center shadow-lg border-4 border-white">
-                <Palette className="w-6 h-6 text-white" />
               </div>
             </div>
 
@@ -272,63 +261,6 @@ const About: React.FC = () => {
                       </div>
                     );
                   })}
-                </div>
-              </div>
-            </div>
-
-            {/* Social Presence CTA */}
-            <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-6 text-white">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div>
-                  <h4 className="font-semibold mb-1">Let's Connect</h4>
-                  <p className="text-sm text-gray-300">
-                    Follow my creative journey across platforms
-                  </p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <a
-                    href="https://www.linkedin.com/in/dharamveerkr/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2.5 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="w-4.5 h-4.5" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/imdharamvrr/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2.5 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
-                    aria-label="Instagram"
-                  >
-                    <Instagram className="w-4.5 h-4.5" />
-                  </a>
-                  <a
-                    href="https://x.com/imdharamvrr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2.5 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
-                    aria-label="X/Twitter"
-                  >
-                    <Twitter className="w-4.5 h-4.5" />
-                  </a>
-                  <a
-                    href="https://www.youtube.com/@Nomadvir"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2.5 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
-                    aria-label="YouTube"
-                  >
-                    <Youtube className="w-4.5 h-4.5" />
-                  </a>
-                  <a
-                    href="mailto:dharamveerkumar774@gmail.com"
-                    className="p-2.5 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
-                    aria-label="Email"
-                  >
-                    <ArrowRight className="w-4.5 h-4.5" />
-                  </a>
                 </div>
               </div>
             </div>
