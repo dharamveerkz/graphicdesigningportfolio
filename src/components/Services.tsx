@@ -1,3 +1,6 @@
+// components/Services.tsx
+"use client";
+
 import React from "react";
 import {
   Palette,
@@ -6,182 +9,264 @@ import {
   Shirt,
   Award,
   Monitor,
-  Clock,
-  RefreshCw,
   Lightbulb,
+  RefreshCw,
+  CheckCircle2,
   ArrowRight,
+  Clock,
 } from "lucide-react";
 
 const Services: React.FC = () => {
   const services = [
     {
       icon: Palette,
-      title: "Branding",
+      title: "Branding & Identity",
+      description: "Create a memorable brand presence with cohesive visual systems",
       items: [
-        "Logo Design",
-        "Business Cards",
-        "Letterheads",
-        "Brand Guidelines",
+        "Logo Design & Variations",
+        "Business Cards & Stationery",
+        "Brand Guidelines & Style Guides",
+        "Brand Strategy Consultation",
       ],
-      color: "from-blue-500 to-blue-600",
     },
     {
       icon: Share2,
-      title: "Social Media",
+      title: "Social Media Design",
+      description: "Engaging visuals optimized for every platform",
       items: [
-        "Instagram Posts",
-        "Facebook Banners",
-        "YouTube Thumbnails",
-        "Story Templates",
+        "Instagram Posts & Stories",
+        "Facebook Covers & Ads",
+        "YouTube Thumbnails & Banners",
+        "LinkedIn Graphics & Templates",
       ],
-      color: "from-purple-500 to-purple-600",
     },
     {
       icon: Printer,
-      title: "Print Media",
-      items: ["Flex Banners", "Posters", "Flyers", "Brochures"],
-      color: "from-green-500 to-green-600",
+      title: "Print & Marketing",
+      description: "High-quality designs ready for professional printing",
+      items: [
+        "Flex Banners & Backdrops",
+        "Posters & Flyers",
+        "Brochures & Catalogs",
+        "Packaging & Labels",
+      ],
     },
     {
       icon: Shirt,
-      title: "Apparel",
-      items: ["T-Shirt Designs", "Hoodies", "Mugs", "Tote Bags"],
-      color: "from-red-500 to-red-600",
+      title: "Merchandise & Apparel",
+      description: "Custom designs that turn fans into brand ambassadors",
+      items: [
+        "T-Shirt & Hoodie Graphics",
+        "Mugs, Caps & Accessories",
+        "Tote Bags & Merch Packs",
+        "Print-Ready File Preparation",
+      ],
     },
     {
       icon: Award,
-      title: "Academic",
-      items: ["Certificates", "ID Cards", "Invitations", "Award Templates"],
-      color: "from-yellow-500 to-yellow-600",
+      title: "Academic & Events",
+      description: "Professional designs for institutions and occasions",
+      items: [
+        "Certificates & Awards",
+        "ID Cards & Badges",
+        "Event Invitations",
+        "Presentation Templates",
+      ],
     },
     {
       icon: Monitor,
-      title: "Web/Presentation",
+      title: "Digital & Web Assets",
+      description: "Clean, responsive designs for digital experiences",
       items: [
-        "Web Banners",
-        "PowerPoint Templates",
-        "Infographics",
-        "Email Headers",
+        "Web Banners & Headers",
+        "Email Templates",
+        "Infographics & Data Viz",
+        "Social Media Kits",
       ],
-      color: "from-indigo-500 to-indigo-600",
     },
   ];
 
   const processSteps = [
     {
+      step: "01",
       icon: Lightbulb,
-      title: "Discovery & Direction",
+      title: "Discovery",
       description:
-        "We begin with a short conversation or brief. I understand your needs, preferences, and goals to set the design direction.",
+        "We start with a brief conversation to understand your goals, audience, and vision. This ensures every design decision aligns with your objectives.",
     },
     {
+      step: "02",
       icon: RefreshCw,
-      title: "Creation & Concepting",
+      title: "Concept & Create",
       description:
-        "You’ll receive two unique design concepts, each carefully built to explore different creative angles for your project.",
+        "I develop 2–3 initial concepts based on our discussion. Each explores a distinct creative direction for your feedback and selection.",
     },
     {
-      icon: Clock,
-      title: "Refine & Finalize",
+      step: "03",
+      icon: CheckCircle2,
+      title: "Refine & Deliver",
       description:
-        "Once you choose your favorite, we fine-tune it with up to three revisions. Final files are prepared for print or digital use — all delivered in just a few days.",
+        "After you choose a direction, we refine with up to 3 revisions. Final files are delivered in all required formats—print-ready or web-optimized.",
     },
   ];
 
   return (
-    <section className="pt-20 pb-16 bg-white">
+    <section className="pt-24 pb-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            All-in-One Custom Graphic Design Services
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+            Professional Design Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From concept to completion, I provide comprehensive design solutions
-            for all your visual needs
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+            End-to-end visual solutions crafted with strategy, precision, and creativity
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mt-6"></div>
+          <div className="w-16 h-1 bg-gradient-to-r from-yellow-400 to-amber-500 mx-auto mt-5 rounded-full" />
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
-            >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            return (
               <div
-                className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                key={index}
+                className="group bg-white rounded-xl p-6 border border-gray-200 hover:border-yellow-300 hover:shadow-lg transition-all duration-300"
               >
-                <service.icon className="w-8 h-8 text-white" />
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="p-3 bg-gray-50 group-hover:bg-yellow-50 rounded-lg border border-gray-200 group-hover:border-yellow-200 transition-colors">
+                    <Icon className="w-5 h-5 text-gray-700 group-hover:text-yellow-600 transition-colors" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-gray-500">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+                <ul className="space-y-2 pl-1">
+                  {service.items.map((item, itemIndex) => (
+                    <li
+                      key={itemIndex}
+                      className="flex items-start gap-2 text-sm text-gray-600"
+                    >
+                      <CheckCircle2 className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {service.title}
-              </h3>
-              <ul className="space-y-2">
-                {service.items.map((item, itemIndex) => (
-                  <li
-                    key={itemIndex}
-                    className="flex items-center text-gray-600"
-                  >
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Process Section */}
-        <div className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-16">
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            My Design Process
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {processSteps.map((step, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <step.icon className="w-10 h-10 text-white" />
-                </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">
-                  {step.title}
-                </h4>
-                <p className="text-gray-600">{step.description}</p>
-              </div>
-            ))}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              How I Work
+            </h3>
+            <p className="text-base text-gray-600 max-w-xl mx-auto">
+              A streamlined process designed for clarity, collaboration, and quality results
+            </p>
+          </div>
+
+          <div className="relative">
+            {/* Connection Line (Desktop) */}
+            <div className="hidden md:block absolute top-10 left-0 right-0 h-px bg-gradient-to-r from-gray-200 via-yellow-300 to-gray-200" />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {processSteps.map((step, index) => {
+                const Icon = step.icon;
+                return (
+                  <div key={index} className="relative text-center md:text-left">
+                    {/* Step Number Badge */}
+                    <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 text-white font-mono text-sm font-bold mb-4 mx-auto md:mx-0">
+                      {step.step}
+                    </div>
+
+                    {/* Icon */}
+                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gray-50 border border-gray-200 mb-4 mx-auto md:mx-0">
+                      <Icon className="w-7 h-7 text-gray-700" />
+                    </div>
+
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      {step.title}
+                    </h4>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
 
-        {/* Pricing Highlight */}
-        <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-3xl p-8 md:p-12 text-center text-black">
-          <h3 className="text-3xl font-bold mb-6">
-            Ready to Start Your Project?
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
-              <Clock className="w-8 h-8 mx-auto mb-3" />
-              <h4 className="font-bold text-lg mb-2">Delivery Time</h4>
-              <p>2–4 days</p>
+        {/* Service Standards / CTA */}
+        <div className="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            {/* Standards */}
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-4">
+                What You Get
+              </h4>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex items-center gap-3">
+                  <Clock className="w-5 h-5 text-yellow-600 flex-shrink-0" />
+                  <div>
+                    <span className="block text-sm font-medium text-gray-900">
+                      Fast Turnaround
+                    </span>
+                    <span className="text-xs text-gray-500">2–4 days</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <RefreshCw className="w-5 h-5 text-yellow-600 flex-shrink-0" />
+                  <div>
+                    <span className="block text-sm font-medium text-gray-900">
+                      Revisions Included
+                    </span>
+                    <span className="text-xs text-gray-500">Up to 3 rounds</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Lightbulb className="w-5 h-5 text-yellow-600 flex-shrink-0" />
+                  <div>
+                    <span className="block text-sm font-medium text-gray-900">
+                      Multiple Concepts
+                    </span>
+                    <span className="text-xs text-gray-500">2–3 options</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Award className="w-5 h-5 text-yellow-600 flex-shrink-0" />
+                  <div>
+                    <span className="block text-sm font-medium text-gray-900">
+                      Print & Web Ready
+                    </span>
+                    <span className="text-xs text-gray-500">All formats</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
-              <Lightbulb className="w-8 h-8 mx-auto mb-3" />
-              <h4 className="font-bold text-lg mb-2">Concepts</h4>
-              <p>2 Initial</p>
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
-              <RefreshCw className="w-8 h-8 mx-auto mb-3" />
-              <h4 className="font-bold text-lg mb-2">Revisions</h4>
-              <p>3 Included</p>
+
+            {/* CTA */}
+            <div className="md:text-right">
+              <p className="text-sm text-gray-600 mb-4">
+                Have a project in mind? Let's discuss how we can bring your vision to life.
+              </p>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center md:justify-end gap-2 px-5 py-2.5 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+              >
+                Start a Project
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
           </div>
-          <a
-            href="#contact"
-            className="inline-flex items-center px-8 py-4 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transform hover:scale-105 transition-all duration-300 shadow-lg group"
-          >
-            Get a Quote Now
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </a>
         </div>
       </div>
     </section>
