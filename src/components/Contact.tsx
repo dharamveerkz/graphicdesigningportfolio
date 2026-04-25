@@ -36,7 +36,8 @@ const Contact: React.FC = () => {
     setStatus("sending");
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/dharamveerkr774@gmail.com", {
+      // ✅ CORRECT EMAIL: dharamveerkumar774@gmail.com
+      const response = await fetch("https://formsubmit.co/ajax/dharamveerkumar774@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -48,6 +49,7 @@ const Contact: React.FC = () => {
           message: formData.project,
           _subject: `New Project Inquiry from ${formData.name}`,
           _template: "table",
+          _captcha: false, // Disable captcha for cleaner UX (optional)
         }),
       });
 
@@ -184,8 +186,8 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
-                    <a href="mailto:dharamveerkr774@gmail.com" className="text-gray-600 hover:text-yellow-600 transition-colors">
-                      dharamveerkr774@gmail.com
+                    <a href="mailto:dharamveerkumar774@gmail.com" className="text-gray-600 hover:text-yellow-600 transition-colors">
+                      dharamveerkumar774@gmail.com
                     </a>
                   </div>
                 </div>
