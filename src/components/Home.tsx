@@ -160,7 +160,7 @@ const Home: React.FC = () => {
           {[
             { value: "3+", label: "Years Exp." },
             { value: "100+", label: "Projects" },
-            { value: "5+", label: "Happy Clients" },
+            { value: "24/7", label: "Availability" },
           ].map((stat, i) => (
             <div key={i} className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-white">{stat.value}</div>
@@ -168,6 +168,10 @@ const Home: React.FC = () => {
             </div>
           ))}
         </div>
+      <div>
+      <div className="group inline-flex items-center px-7 py-3.5 bg-white/5 backdrop-blur-sm border border-white/10 text-white font-medium rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300">Ai Enhanced Projects</div>
+      <div className="group inline-flex items-center px-7 py-3.5 bg-white/5 backdrop-blur-sm border border-white/10 text-white font-medium rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300">Ai Enhanced Projects</div>
+       </div>
       </div>
 
       {/* Scroll Indicator */}
