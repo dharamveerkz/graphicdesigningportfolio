@@ -91,7 +91,7 @@ const Home: React.FC = () => {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mt-4 w-full mx-auto text-center space-y-6 lg:space-y-8">
+      <div className="relative z-10 max-w-5xl mt-8 w-full mx-auto text-center space-y-6 lg:space-y-8">
 
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-3 py-1.5 lg:px-4 lg:py-2 bg-white/5 border border-white/10 rounded-full">
