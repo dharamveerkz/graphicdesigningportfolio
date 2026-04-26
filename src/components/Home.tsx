@@ -17,8 +17,7 @@ const Home: React.FC = () => {
     "Visual Storyteller",
   ];
 
-  const fullText =
-    "Designing Impactful Visuals for Digital & Print Media";
+  const fullText = "Designing Impactful Visuals for Digital & Print Media";
 
   // Typing animation
   useEffect(() => {
@@ -48,7 +47,6 @@ const Home: React.FC = () => {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
-
   // Role rotation
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   useEffect(() => {
@@ -61,7 +59,8 @@ const Home: React.FC = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-[90vh] lg:min-h-[80vh] flex items-center justify-center bg-gray-950 text-white overflow-hidden px-4"
+      // ✅ CHANGED: Removed min-h-[90vh] lg:min-h-[80vh], added py-16 lg:py-24 for balanced spacing
+      className="relative flex items-center justify-center bg-gray-950 text-white overflow-hidden px-4 py-16 lg:py-24"
     >
       {/* Background Grid */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
@@ -97,8 +96,7 @@ const Home: React.FC = () => {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-3 py-1.5 lg:px-4 lg:py-2 bg-white/5 border border-white/10 rounded-full">
           <Sparkles className="w-4 h-4 text-yellow-400" />
-          <span className="text-xs text-gray-300">
-            Available for freelance projects
+          <span className="text-xs text-gray-300">            Available for freelance projects
           </span>
         </div>
 
@@ -147,8 +145,7 @@ const Home: React.FC = () => {
           >
             Let's Talk
             <ChevronRight className="ml-1 w-4 h-4" />
-          </a>
-        </div>
+          </a>        </div>
 
         {/* Stats */}
         <div className="grid grid-cols-3 gap-4 max-w-sm mx-auto pt-4">
