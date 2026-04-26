@@ -59,7 +59,6 @@ const About: React.FC = () => {
     {
       title: "Social Media Manager",
       company: "Freelance & College Clubs",
-      period: "2022 – Present",
       description:
         "Managed content strategy, visual design, and community engagement for multiple student organizations and personal brands across Instagram, LinkedIn, and YouTube.",
       achievements: [
@@ -71,7 +70,6 @@ const About: React.FC = () => {
     {
       title: "Graphic Designer",
       company: "Campus Events & NGOs",
-      period: "2021 – Present",
       description:
         "Designed posters, banners, merchandise, and digital assets for college festivals, workshops, and NGO awareness campaigns.",
       achievements: [
@@ -83,7 +81,6 @@ const About: React.FC = () => {
     {
       title: "Content Creator",
       company: "Personal Brand",
-      period: "2023 – Present",
       description:
         "Building a personal creative brand showcasing design work, tutorials, and behind-the-scenes content across social platforms.",
       achievements: [
