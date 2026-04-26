@@ -168,7 +168,7 @@ const Home: React.FC = () => {
             </div>
           ))}
         </div>
-      <div>
+      <div className="group inline-flex items-center px-7 py-3.5>
       <div className="group inline-flex items-center px-7 py-3.5 bg-white/5 backdrop-blur-sm border border-white/10 text-white font-medium rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300">Ai Enhanced Projects</div>
       <div className="group inline-flex items-center px-7 py-3.5 bg-white/5 backdrop-blur-sm border border-white/10 text-white font-medium rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300">Ai Enhanced Projects</div>
        </div>
