@@ -51,7 +51,7 @@ const About: React.FC = () => {
   const socialStats = [
     { platform: "Pages Managed", value: "5+", icon: TrendingUp },
     { platform: "Posts Created", value: "100+", icon: Palette },
-    { platform: "Engagement Growth", value: "40%+", icon: TrendingUp },
+    { platform: "Engagement Growth", value: "60%+", icon: TrendingUp },
     { platform: "Years Experience", value: "3+", icon: Calendar },
   ];
 
@@ -130,23 +130,21 @@ const About: React.FC = () => {
                 <span className="font-semibold text-gray-900">
                   Dharamveer Kumar
                 </span>{" "}
-                – a B.Tech CSE student at Bakhtiyarpur College of Engineering,
-                Patna, and a passionate digital creative.
+                – a B.Tech CSE graduate and a digital creative driven by curiosity and storytelling.
               </p>
               <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4">
-                I specialize in{" "}
+                I enjoy working with{" "}
                 <span className="font-medium text-gray-900">
-                  graphic design, social media management, content creation,
-                  video editing, and photography
+                  vibrant colors, creating visuals that spark interest and make people feel something.
                 </span>
-                — crafting visuals that connect brands with their audiences.
+                My approach is all about blending creativity with curiosity, turning simple ideas into engaging experiences.
               </p>
               <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                I believe{" "}
+                I also explore the use of{" "}
                 <span className="font-semibold text-yellow-600">
-                  design that connects
+                  AI
                 </span>{" "}
-                can turn ideas into powerful, memorable identities.
+                to enhance creativity, always experimenting with new ways to make visuals more dynamic, meaningful, and memorable.
               </p>
             </div>
 
