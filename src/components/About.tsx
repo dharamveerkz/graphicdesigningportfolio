@@ -38,14 +38,14 @@ const About: React.FC = () => {
   ];
 
   const tools = [
-    { name: "Adobe Photoshop", level: "Advanced" },
     { name: "Adobe Illustrator", level: "Advanced" },
+    { name: "Adobe Aftereffects", level: "Basic" },
     { name: "Figma", level: "Advanced" },
     { name: "Canva", level: "Expert" },
-    { name: "Sketch", level: "Intermediate" },
-    { name: "Infinite Design", level: "Intermediate" },
-    { name: "Microsoft Designer", level: "Intermediate" },
     { name: "Premiere Pro", level: "Basic" },
+    { name: "Davinci Resolve", level: "Basic" },
+    { name: "Capcut", level: "Advanced" },
+    { name: "VN", level: "Advancd" },
   ];
 
   const socialStats = [
